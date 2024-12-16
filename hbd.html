@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday, Best Friend!</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="greeting">Happy Birthday, <span id="friend-name">[Your Best Friend's Name]</span>!</h1>
+    <div class="message">
+      <p>You're the best! Wishing you a day filled with love, joy, and laughter. I'm so grateful to have you as my best friend.</p>
+      <p>May this year bring you even more happiness and success. Cheers to more amazing memories together!</p>
+    </div>
+    <button id="surpriseButton" onclick="showSurprise()">Click for a Surprise!</button>
+    <div id="surpriseMessage" class="surprise-message" style="display: none;">
+      <h2>🎉 Here's a little surprise! 🎉</h2>
+      <p>You're the most amazing person ever! I hope your birthday is as special as you are! 🥳</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  text-align: center;
+  padding: 50px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+}
+
+h1 {
+  font-size: 3rem;
+  color: #f39c12;
+  margin-bottom: 20px;
+}
+
+span {
+  color: #e74c3c;
+}
+
+.message {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+.surprise-message {
+  background-color: #f39c12;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+function showSurprise() {
+    const surpriseMessage = document.getElementById('surpriseMessage');
+    surpriseMessage.style.display = 'block';
+    document.getElementById('surpriseButton').disabled = true;
+  }
+  
